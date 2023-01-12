@@ -31,11 +31,7 @@ jobs:
       - name: install required modules
         run: pip install -r requirements.txt
         
-      - name: input account_secret
+      - name: test Line Notify
         env:
-           SHOPEE_ACCOUNT: ${{ secrets.SHOPEE_ACCOUNT }}
-           SHOPEE_KEYWORD: ${{ secrets.SHOPEE_KEYWORD }}
-        run: 
-           SHOPEE_ACCOUNT=$SHOPEE_ACCOUNT 
-           SHOPEE_KEYWORD=$SHOPEE_KEYWORD
-           python Receive_shoppe_money.py
+          LINE_NOTIFY_TOKEN: ${{ secrets.LINE_NOTIFY_TOKEN }}
+        run: LINE_NOTIFY_TOKEN=$LINE_NOTIFY_TOKEN python practice.py
