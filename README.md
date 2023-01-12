@@ -1,0 +1,1 @@
+# Get-shoppe-coin-automatized
